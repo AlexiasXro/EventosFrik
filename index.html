@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento SP-Chaco</title>
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <style>
+        @keyframes fondoAnimado {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-background {
+            background: linear-gradient(-45deg, #ff6b6b, #ffb06b, #6bffac, #6b6bff);
+
+            background-size: 300% 300%;
+            animation: fondoAnimado 15s ease infinite;
+        }
+
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .Btn-Container {
+            display: flex;
+            width: 170px;
+            height: fit-content;
+            background-color: #1d2129;
+            border-radius: 40px;
+            box-shadow: 0px 5px 10px #bebebe;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-Container {
+            width: 45px;
+            height: 45px;
+            background-color: #f59aff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 3px solid #1d2129;
+        }
+
+        .text {
+            width: calc(170px - 45px);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: grey-800;
+            font-size: 1.1em;
+            letter-spacing: 1.2px;
+        }
+
+        .icon-Container svg {
+            transition-duration: 1.5s;
+        }
+
+        .Btn-Container:hover .icon-Container svg {
+            transition-duration: 1.5s;
+            animation: arrow 1s linear infinite;
+        }
+
+        @keyframes arrow {
+            0% {
+                opacity: 0;
+                margin-left: 0px;
+            }
+
+            100% {
+                opacity: 1;
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="animated-background flex flex-col items-center justify-center min-h-screen text-grey-800">
+
+    <!--<img src="chica_anime.png" alt="Anime"
+        class="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-10 w-40 md:w-60 opacity-100">
+-->
+
+
+    <header class="text-center py-8">
+        
+    <img src="logo.png" alt="Logo Eventos Anime" class="mx-auto w-40 md:w-60 drop-shadow-md">
+
+        <p class="text-lg mt-2 ">¡Explora nuestras actividades!</p>
+    </header>
+
+    <section class="flex flex-col gap-6 w-80">
+
+
+      <!-- Botón Reglamento K-Pop -->
+<button class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-yellow-500 rounded-full bg-transparent backdrop-blur-md hover:bg-yellow-500 hover:bg-opacity-40 transition-all">
+  📜 Reglamento K-Pop
+</button>
+
+<!-- Botón Inscripción K-Pop -->
+<button class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-fuchsia-500 rounded-full bg-transparent backdrop-blur-md hover:bg-fuchsia-500 hover:bg-opacity-40 transition-all">
+  ✍ Inscripción K-Pop
+</button>
+
+<!-- Botón Reglamento Cosplay -->
+<button class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-yellow-500 rounded-full bg-transparent backdrop-blur-md hover:bg-yellow-500 hover:bg-opacity-40 transition-all">
+  📜 Reglamento Cosplay
+</button>
+
+<!-- Botón Inscripción Cosplay -->
+<button class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-fuchsia-500 rounded-full bg-transparent backdrop-blur-md hover:bg-fuchsia-500 hover:bg-opacity-40 transition-all">
+  ✍ Inscripción Cosplay
+</button>
+
+<!-- Botón Cronograma -->
+<button class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-yellow-500 rounded-full bg-transparent backdrop-blur-md hover:bg-yellow-500 hover:bg-opacity-40 transition-all">
+  🕒 Ver Cronograma
+</button>
+
+
+
+    </section>
+<footer class="flex justify-center items-center gap-6 py-6">
+    <img src="sponsor.png" alt="Logo Sponsor" class="w-32 md:w-40 drop-shadow-md">
+    <img src="logoAlgodon.png" alt="Logo Sponsor" class="w-32 md:w-40 drop-shadow-md">
+</footer>
+
+</body>
+
+</html>
