@@ -16,177 +16,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento SP-Chaco</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lexend+Zetta:wght@100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <link href="./tailwind.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
 
-    <style>
-        @keyframes fondoAnimado {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .animated-background {
-            background: linear-gradient(-45deg, #ff6b6b, #ffb06b, #6bffac, #6b6bff);
-
-            background-size: 300% 300%;
-            animation: fondoAnimado 15s ease infinite;
-        }
-
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .Btn-Container {
-            display: flex;
-            width: 170px;
-            height: fit-content;
-            background-color: #1d2129;
-            border-radius: 40px;
-            box-shadow: 0px 5px 10px #bebebe;
-            justify-content: space-between;
-            align-items: center;
-            border: none;
-            cursor: pointer;
-        }
-
-        .icon-Container {
-            width: 45px;
-            height: 45px;
-            background-color: #f59aff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 3px solid #1d2129;
-        }
-
-        .text {
-            width: calc(170px - 45px);
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: grey-800;
-            font-size: 1.1em;
-            letter-spacing: 1.2px;
-        }
-
-        .icon-Container svg {
-            transition-duration: 1.5s;
-        }
-
-        .Btn-Container:hover .icon-Container svg {
-            transition-duration: 1.5s;
-            animation: arrow 1s linear infinite;
-        }
-
-        @keyframes arrow {
-            0% {
-                opacity: 0;
-                margin-left: 0px;
-            }
-
-            100% {
-                opacity: 1;
-                margin-left: 10px;
-            }
-        }
-    </style>
 </head>
 
-<body class="animated-background flex flex-col items-center justify-center min-h-screen text-grey-800">
+<body
+    class="bg-[url('./img/ma.webp')] bg-cover bg-center min-h-screen flex flex-col items-center justify-center min-h-screen text-gray-100 px-4 md:px-0">
 
-    <!--<img src="chica_anime.png" alt="Anime"
-        class="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-10 w-40 md:w-60 opacity-100">
--->
+    <div class="backdrop-blur bg-white/05 rounded-2xl shadow-lg w-full max-w-lg px-6 py-8 mt-10 md:mt-20">
+        <!-- Logo y descripción -->
+        <header class="text-center mb-6">
+            <img src="./img/fan zone.png" alt="Logo Fan Zone Chaco" class="mx-auto w-40 md:w-60 drop-shadow-md" />
+            <p class="text-base md:text-lg font-medium ">
+                Cultura pop, anime, cómics, k-pop y mucho más en un solo lugar.
+            </p>
+        </header>
 
+        <!-- Botones de acceso -->
+        <section class="w-full flex flex-col md:flex-col gap-4 items-center justify-center">
+            <a href="https://docs.google.com/document/d/1HjG1IvBwAu8Te3hcNBo8YAIJDDoKPm3RDvQFxIW4-L0/edit?usp=sharing"
+                <button type="button" class="btn">
+                <strong>📜 Reglamento K-Pop</strong>
 
-    <header class="text-center py-8">
+                </button>
+            </a>
 
-        <img src="./img/fan zone.png" alt="Logo Eventos Anime" class="mx-auto w-40 md:w-60 drop-shadow-md">
+            <a href="https://docs.google.com/document/d/1oo0KEBZXJjI28nNRsDDIGSxf6F0jJt0-3Ejy3nj2QG0/edit?usp=sharing"
+                <button type="button" class="btn">
+                <strong>📜 Reglamento Cosplay</strong>
 
-        <p class="text-lg mt-2 ">Cultura pop, anime, cómics, k-pop y mucho más en un solo lugar.</p>
-    </header>
+                </button>
+            </a>
 
-    <section class="flex flex-col gap-6 w-80">
+            <!-- Botón  -->
+            <a id="kpop-link" href="https://docs.google.com/forms/d/17QVuTZ_m3hApicYPRnt1s90UFYILtomwr_K-25TwFuw/edit">
+                <button type="button" class="btn">
 
-
-        <!-- Botón Reglamento K-Pop -->
-        <a href="https://docs.google.com/document/d/1HjG1IvBwAu8Te3hcNBo8YAIJDDoKPm3RDvQFxIW4-L0/edit?usp=sharing"
-            target="_blank" class="w-full">
-            <button
-                class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-yellow-500 rounded-full bg-transparent backdrop-blur-md hover:bg-yellow-500 hover:bg-opacity-40 transition-all">
-                📜 Reglamento K-Pop
-            </button>
-        </a>
-
-
-        <!-- Botón Inscripción K-Pop -->
-        <a href="https://docs.google.com/forms/d/17QVuTZ_m3hApicYPRnt1s90UFYILtomwr_K-25TwFuw/edit" target="_blank"
-            class="w-full">
-            <button
-                class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-fuchsia-500 rounded-full bg-transparent backdrop-blur-md hover:bg-fuchsia-500 hover:bg-opacity-40 transition-all">
-                ✍ Inscripción K-Pop
-            </button>
-        </a>
-
-
-        <!-- Botón Reglamento Cosplay -->
-        <a href="https://docs.google.com/document/d/1oo0KEBZXJjI28nNRsDDIGSxf6F0jJt0-3Ejy3nj2QG0/edit?usp=sharing"
-            target="_blank" class="w-full">
-            <button
-                class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-yellow-500 rounded-full bg-transparent backdrop-blur-md hover:bg-yellow-500 hover:bg-opacity-40 transition-all">
-                📜 Reglamento Cosplay
-            </button>
-        </a>
-
-
-        <!-- Botón Inscripción Cosplay -->
-
-        <a href="https://docs.google.com/forms/d/17QVuTZ_m3hApicYPRnt1s90UFYILtomwr_K-25TwFuw/edit" target="_blank"
-            class="w-full">
-            <button
-                class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-fuchsia-500 rounded-full bg-transparent backdrop-blur-md hover:bg-fuchsia-500 hover:bg-opacity-40 transition-all">
-                ✍ Inscripción Cosplay
-            </button>
-        </a>
-
-        <!-- Botón Cronograma -->
-        <a href="https://tu-enlace.com" target="_blank" class="w-full">
-            <button
-                class="w-full py-4 text-grey-800 font-semibold text-lg border-4 border-yellow-500 rounded-full bg-transparent backdrop-blur-md hover:bg-yellow-500 hover:bg-opacity-40 transition-all">
-                🕒 Ver Cronograma
-            </button>
-        </a>
+                    <strong> ✍ Inscripción K-Pop</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                </button>
+            </a>
+            <!-- Botón  -->
+            <a id="cosplay-link"
+                href="https://docs.google.com/forms/d/17QVuTZ_m3hApicYPRnt1s90UFYILtomwr_K-25TwFuw/edit" <button
+                type="button" class="btn">
+                <strong> ✍ Inscripción Cosplay</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
 
 
+                </button>
+            </a>
+
+            <div id="timer">Cargando...</div>
+            <a href="https://tu-enlace.com" <button type="button" class="btn">
+                <strong> 🕒 Ver Cronograma</strong>
+
+                </button>
+            </a>
 
 
-    </section>
-    <footer class="flex justify-center items-center gap-6 py-6">
-        <img src="./img/sponsor.png" alt="Logo Sponsor" class="w-32 md:w-40 drop-shadow-md">
-        <img src="./img/logoAlgodon.png" alt="Logo Sponsor" class="w-32 md:w-40 drop-shadow-md">
+        </section>
+    </div>
+
+
+    <!-- Sponsors -->
+    <footer class="flex  justify-center items-center gap-6 py-10 mt-10">
+        <img src="./img/sponsor.png" alt="Logo Sponsor 1" class="w-28 md:w-36 drop-shadow-md" />
+        <img src="./img/logoAlgodon.png" alt="Logo Sponsor 2" class="w-28 md:w-36 drop-shadow-md" />
     </footer>
 
+    <script src="inscripcion.js"></script>
 </body>
 
 </html>
