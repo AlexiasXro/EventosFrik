@@ -5,6 +5,7 @@ Bienvenido/a a **Eventos Frik**, una landing page moderna y responsiva diseñada
 ## 🔗 Enlace en vivo
 
 👉 [Ver Landing Page](https://alexiasxro.github.io/EventosFrik/)
+🌐 [Netlify Pages](https://faneventos.netlify.app/)
 
 ## 🧰 Tecnologías utilizadas
 
@@ -13,6 +14,9 @@ Bienvenido/a a **Eventos Frik**, una landing page moderna y responsiva diseñada
 - 💨 [Tailwind CSS](https://tailwindcss.com/)  
 - 🧠 JavaScript 
 - 🌐 GitHub Pages (para hosting)
+- 🌐 Netlify Pages (para hosting del cliente)
+
+
 
 
 ## 💡 Posibles mejoras
