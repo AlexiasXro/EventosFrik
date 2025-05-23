@@ -1,4 +1,4 @@
-# 🎌 Eventos Frik — Landing Page de Eventos Anime
+# 🎌 Landing Page de Eventos Anime
 
 Bienvenido/a a **Eventos Frik**, una landing page moderna y responsiva diseñada para promocionar eventos de anime, cosplay, manga y cultura geek.
 
